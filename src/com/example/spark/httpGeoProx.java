@@ -94,6 +94,7 @@ public class httpGeoProx {
 			HttpClient httpclient = new DefaultHttpClient();
 			//http post type
 			HttpPost request = new HttpPost(url);
+			request.addHeader("spark", "spark");
 			//add key-pair into body of post
 			request.setEntity(new UrlEncodedFormEntity(body));
 			//execute response
